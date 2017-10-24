@@ -1,18 +1,17 @@
-/*Document*/
+/*DOCUMENT*/
 html, body {
   overflow-x: hidden;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
-h1 {font-size: 52px;}
-h2 {font-size: 36px;}
-h3 {font-size: 24px;}
+h1 {font-size: 36px;}
+h2 {font-size: 28px;}
+h3 {font-size: 20px;}
 h4 {font-size: 16px;}
 h5 {font-size: 16px;}
-p {font-size: 20px;}
-main p {font-size: 18px;}
+p {font-size: 18px;}
 
-/*Grid*/
+/*GRID*/
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -41,43 +40,29 @@ main p {font-size: 18px;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-/*Media queries*/
+/*MEDIA QUERIES*/
 /* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
+[class*="col-"] {width: 100%;}
+
+@media screen and (max-width: 991px) {
+  .features{
+    text-align: center;
+  }
+
+  .note-bg {
+    display: none;
+  }
+
+  .images-bg {
+    display: none;
+  }
+
+  .link-bg {
+    display: none;
+  }
 }
-@media (min-width: 768px) {
-  /* Small devices (tablets, 768px and up) */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-@media (min-width: 992px) {
-  /* Medium devices (desktops, 992px and up) */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-  .nav {padding: 1em 10% 0;}
-}
-@media (min-width: 1200px) {
+
+@media screen and (min-width: 992px) {
   /* Large devices (large desktops, 1200px and up) */
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
@@ -91,8 +76,87 @@ main p {font-size: 18px;}
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+
+  .nav {
+    padding: 1em 10% 0;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .ft-box {
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .notes, .links {
+    display: flex;
+    height: 700px;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+  }
+
+  .note-text, .link-text {
+    max-width: 360px;
+    margin: auto;
+  }
+
+  .image-text {
+    order: 2;
+    max-width: 360px;
+    margin: auto;
+  }
+
+  .notes img, .links img {
+    max-width: 1000px;
+    margin: auto -50px auto auto;
+  }
+
+  .images img {
+    order: 1;
+    max-width: 1000px;
+    margin: auto auto auto -50px;
+  }
+
+  .note-bg {
+    position: absolute;
+    z-index: -1;
+    padding-top: 220px;
+    padding-left: 50%;
+    left: -320px;
+  }
+
+  .images-bg {
+    position: absolute;
+    z-index: -1;
+    padding-top: 360px;
+    padding-left: 50%;
+  }
+
+  .link-bg {
+    position: absolute;
+    z-index: -1;
+    padding-top: 280px;
+    padding-left: 50%;
+    left: -320px;
+  }
 }
 
+/*HEADER*/
 header {
   color: #FFFFFF;
   background: linear-gradient(180deg, #62B2E2 0%, #AA7DE4 100%);
@@ -135,6 +199,7 @@ header nav div > a {
   color: #FFFFFF;
 }
 
+/*HERO*/
 .hero {
   text-align: center;
   display: block;
@@ -168,4 +233,116 @@ header nav div > a {
   display: block;
   max-width: 1600px;
   margin: 1em auto 0;
+}
+
+/*FEATURES*/
+.features {
+  height: auto;
+  color: #50596B;
+}
+
+.features div h2 {
+  font-weight: 300;
+}
+
+.features div p {
+  font-weight: 300;
+  line-height: 28px;
+}
+
+/*PRICING*/
+.pricing {
+  text-align: center;
+  color: #50596B;
+  background-color: #F5F6FA;
+  height: auto;
+  margin-top: 2em;
+  padding: 50px 0 80px;
+}
+
+.pricing-title {
+  margin: 0 auto;
+}
+
+.pricing-title h2 {
+  font-weight: 300;
+}
+
+.pricing-title p {
+  font-weight: 300;
+  line-height: 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-categories {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.pricing ul {
+  list-style: none;
+}
+
+.pricing hr {
+  height: 2px;
+  margin-top: 20px;
+}
+
+.pr-box {
+  height: 540px;
+  margin: 1em 2em 0;
+}
+
+.pr-box ul {
+  list-style: none;
+  line-height: 48px;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.beginner h3, .explorer h3, .professional h3 {
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+
+.beginner p {
+  font-size: 16px;
+  color: #2DCFF0;
+  margin-top: 20px;
+}
+
+.explorer p {
+  font-size: 16px;
+  color: #4C85FF;
+  margin-top: 20px;
+}
+
+.professional p {
+  font-size: 16px;
+  color: #5E44BC;
+  margin-top: 20px;
+}
+
+.price-free, .price-paid {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.price-free {
+  line-height: 220px;
+}
+
+.price-paid {
+  line-height: 120px;
+}
+
+.pr-btn {
+  text-decoration: none;
+  color: #50596B;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #EE3A85;
+  padding: 10px 40px;
 }

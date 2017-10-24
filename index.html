@@ -32,86 +32,98 @@
       </div>
     </header>
 
-    <main role="main">
-      <!-- Features -->
-      <section class="features">
-        <!-- Notes -->
-        <div class="create notes">
-          <h2 id="feature-title">Create Notes</h2>
-          <p>Using Markdown, you can create simple text­based documents to save and share. You can collaborate with others to write and edit content.</p>
-          <img src="images/note.png" class="col-7" alt="Create Notes">
+    <!-- Notes -->
+    <section class="container features">
+      <div class="container notes">
+        <div class="col-12 ft-box">
+          <div class="col-3 note-text">
+            <h2>Create Notes</h2>
+            <p>Using Markdown, you can create simple text­based documents to save and share. You can collaborate with others to write and edit content.</p>
+          </div>
+          <img src="images/note.png" class="col-8" alt="Create Notes">
         </div>
-        <!-- Images -->
-        <div class="save images">
-          <h2 id="feature-title">Save Images</h2>
-          <p>Are there images you find interesting enough to save? Now you have a way to organize and store those within Cloud Space.</p>
-          <img src="images/images.png" class="col-7" alt="Save Images">
+        <img src="images/note-bg.png" class="note-bg" alt="">
+      </div>
+      <!-- Images -->
+      <div class="container images">
+        <div class="col-12 ft-box">
+          <div class="col-3 image-text">
+            <h2>Save Images</h2>
+            <p>Are there images you find interesting enough to save? Now you have a way to organize and store those within Cloud Space.</p>
+          </div>
+          <img src="images/images.png" class="col-8" alt="Save Images">
         </div>
-        <!-- Links -->
-        <div class="add links">
-          <h2 id="feature-title">Add Links</h2>
-          <p>Forget bookmarking sites in your browser. With Cloud Space, you can add links, group them and view them from any computer.</p>
-          <img src="images/link.png" class="col-7" alt="Add Links">
+        <img src="images/images-bg.png" class="images-bg" alt="">
+      </div>
+      <!-- Links -->
+      <div class="container links">
+        <div class="col-12 ft-box">
+          <div class="col-3 link-text">
+            <h2>Add Links</h2>
+            <p>Forget bookmarking sites in your browser. With Cloud Space, you can add links, group them and view them from any computer.</p>
+          </div>
+          <img src="images/link.png" class="col-8" alt="Add Links">
         </div>
-      </section>
+        <img src="images/link-bg.png" class="link-bg" alt="">
+      </div>
+    </section>
 
-      <!-- Pricing -->
-      <section class="container">
-        <div class="row">
-          <h2>How much space do you need?</h2>
-          <p>We have many options to fit your needs. It’s free to try for 30 days, and you can always change your plan after signing up. Here are the different features of each plan:</p>
-        </div>
-        <ul class="container">
-          <li class="col-4">
-            <div class="box">
-              <img src="images/telescope.png" alt="Telescope">
-              <hr noshade size=4 width=240px color=2DCFF0>
-              <h3>Some Space...</h3>
-              <h4>BEGINNER</h4>
-              <ul>
-                <li>Up to 5 folders</li>
-                <li>Up to 10 collaborators</li>
-                <li><b>2GB</b> of storage</li>
-                <li><b>FREE!</b></li>
-              </ul>
-            </div>
-          </li>
-          <li class="col-4">
-            <div class="box">
-              <img src="images/observatory.png" alt="Observatory">
-              <hr noshade size=4 width=240px color=4C85FF>
-              <h3>More Space.</h3>
-              <h4>EXPLORER</h4>
-              <ul>
-                <li>Up to 10 folders</li>
-                <li>Up to 20 collaborators</li>
-                <li><b>5GB</b> of storage</li>
-                <li>Real-time collaboration</li>
-                <li><b>$5</b> month</li>
-              </ul>
-            </div>
-          </li>
-          <li class="col-4">
-            <div class="box">
-              <img src="images/rocket.png" alt="Rocket">
-              <hr noshade size=4 width=240px color=5E44BC>
-              <h3>ALL THE SPACE!</h3>
-              <h4>PROFESSIONAL</h4>
-              <ul>
-                <li>Unlimited folders</li>
-                <li>Unlimited collaborators</li>
-                <li><b>Unlimited GB</b> of storage</li>
-                <li>Real-time collaboration</li>
-                <li><b>$10</b> month</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div class="container">
-          <a href="signup.html" class="btn">START YOUR FREE TRIAL</a>
-        </div>
-      </section>
-    </main>
+    <!-- Pricing -->
+    <section class="container pricing">
+      <div class="pricing-title">
+        <h2>How much space do you need?</h2>
+        <p>We have many options to fit your needs. It’s free to try for 30 days, and you can always change your plan after signing up.<br>Here are the different features of each plan:</p>
+      </div>
+      <ul class="container price-categories">
+        <li class="col-4 beginner">
+          <div class="pr-box">
+            <img src="images/telescope.png" alt="Telescope">
+            <hr noshade width=240px color=2DCFF0>
+            <h3>Some Space...</h3>
+            <p>BEGINNER</p>
+            <ul>
+              <li>Up to 5 folders</li>
+              <li>Up to 10 collaborators</li>
+              <li><b>2GB</b> of storage</li>
+              <li class="price-free"><b>FREE!</b></li>
+            </ul>
+          </div>
+        </li>
+        <li class="col-4 explorer">
+          <div class="pr-box">
+            <img src="images/observatory.png" alt="Observatory">
+            <hr noshade width=240px color=4C85FF>
+            <h3>More Space.</h3>
+            <p>EXPLORER</p>
+            <ul>
+              <li>Up to 10 folders</li>
+              <li>Up to 20 collaborators</li>
+              <li><b>5GB</b> of storage</li>
+              <li>Real-time collaboration</li>
+              <li class="price-paid"><b>$5</b> month</li>
+            </ul>
+          </div>
+        </li>
+        <li class="col-4">
+          <div class="pr-box professional">
+            <img src="images/rocket.png" alt="Rocket">
+            <hr noshade width=240px color=5E44BC>
+            <h3>ALL THE SPACE!</h3>
+            <p>PROFESSIONAL</p>
+            <ul>
+              <li>Unlimited folders</li>
+              <li>Unlimited collaborators</li>
+              <li><b>Unlimited GB</b> of storage</li>
+              <li>Real-time collaboration</li>
+              <li class="price-paid"><b>$10</b> month</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="container">
+        <a href="signup.html" class="pr-btn">START YOUR FREE TRIAL</a>
+      </div>
+    </section>
 
     <footer>
       <div class="container">
