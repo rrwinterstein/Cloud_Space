@@ -158,7 +158,7 @@ p {font-size: 18px;}
 }
 
 @media screen and (min-width: 992px) {
-  /*Large devices (large desktops, 1200px and up)*/
+  /*Large devices (large desktops, 992px and up)*/
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
