@@ -2,6 +2,8 @@
 html, body {
   overflow-x: hidden;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*GRID*/
@@ -33,28 +35,275 @@ html, body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-/*MEDIA QUERIES*/
-/*For mobile phones:*/
-[class*="col-"] {width: 100%;}
-
-@media screen and (max-width: 991px) {
-
+/*STYLE*/
+/*NAV*/
+.left-nav {
+  height: 100vh;
+  min-width: 220px;
+  color: #FFFFFF;
+  background-color: #393A4A;
+  float: left;
+  position: fixed;
+  display: block;
 }
 
-@media screen and (min-width: 992px) {
-  /*Large devices (large desktops, 992px and up)*/
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+.site-logo {
+  display: block;
+  margin: 40px 0;
+  text-align: center;
 }
 
-/*GLOBAL STYLES*/
+.site-logo img {
+  width: 80px;
+}
+
+.items, .shared, .folders {
+  margin: 0 40px;
+}
+
+.items p, .folders p, .shared p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 60px;
+  height: 60px;
+  margin: 0;
+}
+
+.items p img, .folders p img, .shared p img {
+  float: right;
+  margin: 25px 0;
+  padding: 0;
+}
+
+.folders p img, .shared p img {
+  transform: rotate(180deg);
+}
+
+.items ul {
+  margin: 0;
+  padding: 0 0 0 16px;
+}
+
+.items li {
+  font-size: 20px;
+  font-weight: 300;
+  list-style-type: none;
+  height: 50px;
+  padding: 0;
+}
+
+#active {
+  margin-left: -16px;
+  width: 150%;
+  background-color: #17CAC5;
+  border-left: 16px solid #17CAC5;
+}
+
+.items img {
+  margin-top: 18px;
+  padding: 0 16px 0 0;
+}
+
+.items ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.left-nav hr {
+  display: block;
+  margin: 0 30px;
+}
+
+/*CONTENT*/
+.content {
+  position: relative;
+  float: right;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+/*HEADER*/
+.header {
+  display: inline-flex;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px solid #CCCCCC;
+  padding: 0;
+}
+
+.search {
+  margin: 0 20px 0 30px;
+}
+
+.search-bar {
+  margin: auto 0;
+}
+
+.search-bar {
+  font-size: 20px;
+  text-decoration: none;
+  color: #CCCCCC;
+}
+
+.header-nav {
+  display: inline-flex;
+  position: absolute;
+  right: 0;
+}
+
+.nav-btn {
+  height: 50px;
+  margin: 5px 0;
+  border-right: 2px solid #CCCCCC;
+  padding: 0 20px;
+}
+
+.log-out {
+  border: none;
+}
+
+.nav-btn img {
+  margin: 12.5px 0;
+}
+
+/*SUBHEADER*/
+.subheader {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 96%;
+  margin: 20px 2%;
+}
+
+.view {
+  display: flex;
+  position: relative;
+  float: left;
+  width: auto;
+  margin-top: 16px;
+}
+
+.view p {
+  font-size: 16px;
+  color: #CCCCCC;
+  margin: 0;
+  border-bottom: 2px solid #CCCCCC;
+  padding: 0 20px 4px;
+}
+
+#selected {
+  border-bottom: 2px solid #17CAC5;
+}
+
+.add-btn {
+  position: relative;
+  float: right;
+  padding: 10px 0;
+}
+
+.add-btn a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #EE3A85;
+  padding: 8px 24px;
+}
+
+/*ITEMS*/
+.content-item {
+  display: block;
+  float: left;
+  width: 98%;
+  margin: 0 0 25px;
+}
+
+.item-box {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  background-color: #F7F7F7;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+  padding: 20px;
+}
+
+@media (min-width: 460px) {
+  .content {
+    position: relative;
+    float: right;
+  }
+
+  .content-item {
+    display: block;
+    float: left;
+    width: 46%;
+    margin: 0 2% 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    position: relative;
+    float: right;
+  }
+
+  .content > .container {
+    width: 700px;
+  }
+
+  .content-item {
+    width: 31.3333%;
+    margin: 0 1% 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    position: relative;
+    float: right;
+  }
+
+  .content > .container {
+    width: auto;
+  }
+
+  .content-item {
+    width: 23%;
+    margin: 0 1% 25px;
+  }
+}
+
+/*ITEM CONTENT*/
+.item-box > img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.item-box h2 > img {
+  height: 20px;
+  padding-right: 10px;
+}
+
+.item-box h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin: auto;
+}
+
+.item-box p {
+  font-family: "Noto Serif", serif;
+  font-size: 16px;
+  color: #555555;
+  line-height: 21px;
+}
+
+.item-box {
+  overflow-y: scroll;
+}

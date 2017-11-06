@@ -8,6 +8,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -18,49 +19,62 @@
 <body class="dashboard">
   <!-- LEFT NAV -->
   <nav id="left-nav" class="left-nav col-2">
-    <a href="#" class="site-logo"><img src="images/header-logo.svg"</a>
+    <a href="#" class="site-logo"><img src="images/header-logo.svg"></a>
     <div class="items">
-      <p>Items</p>
+      <p>Items<img src="images/nav-icons/arrow.svg" alt=""></p>
       <ul>
-        <li><a href="dashboard.html"><img src="images/nav-icons/all.svg" alt="">All Items</a></li>
+        <li id="active"><a href="dashboard.html"><img src="images/nav-icons/all.svg" alt="">All Items</a></li>
         <li><a href="#"><img src="images/nav-icons/notes.svg" alt="">Notes</a></li>
         <li><a href="dashboard-images.html"><img src="images/nav-icons/images.svg" alt="">Images</a></li>
         <li><a href="#"><img src="images/nav-icons/links.svg" alt="">Links</a></li>
       </ul>
     </div>
+    <hr noshade color=#60616E>
     <div class="folders">
-      <p>Folders</p>
+      <p>Folders<img src="images/nav-icons/arrow.svg" alt=""></p>
     </div>
+    <hr noshade color=#60616E>
     <div class="shared">
-      <p>Shared</p>
+      <p>Shared<img src="images/nav-icons/arrow.svg" alt=""></p>
     </div>
   </nav>
 
   <main role="main">
     <!-- CONTENT -->
-    <section class="content">
-      <div class="container">
-        <div class="header">
-          <div class="search-bar">
-            <a href="#"><img src="images/header-icons/search.svg" alt="">Search your space...</a>
-          </div>
-          <div class="header-nav">
+    <section class="content col-10">
+
+      <!-- HEADER -->
+      <div class="header">
+        <img src="images/header-icons/search.svg" class="search" alt="">
+        <a href="#" class="search-bar">Search your space...</a>
+        <div class="header-nav">
+          <div class="nav-btn">
             <a href="#"><img src="images/header-icons/home.svg" alt=""></a>
+          </div>
+          <div class="nav-btn">
             <a href="#"><img src="images/header-icons/user.svg" alt=""></a>
+          </div>
+          <div class="nav-btn">
             <a href="#"><img src="images/header-icons/settings.svg" alt=""></a>
+          </div>
+          <div class="nav-btn log-out">
             <a href="#"><img src="images/header-icons/log-out.svg" alt=""></a>
           </div>
         </div>
-        <div class="subheader">
-          <div class="view">
-            <p>Grid</p>
-            <p>List</p>
-          </div>
-          <div class="add-btn">
-            <a href="#" class="btn">+ Add</a>
-          </div>
+      </div>
+
+      <!-- SUBHEADER -->
+      <div class="subheader">
+        <div class="view">
+          <p id="selected">Grid</p>
+          <p>List</p>
+        </div>
+        <div class="add-btn">
+          <a href="#">+ Add</a>
         </div>
       </div>
+
+      <!-- ITEMS -->
       <div class="container">
         <div class="content-item">
           <div class="item-box">
