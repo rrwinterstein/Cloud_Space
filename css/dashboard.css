@@ -118,7 +118,6 @@ html, body {
 .content {
   position: relative;
   float: right;
-  height: 100vh;
   background-color: #FFFFFF;
 }
 
