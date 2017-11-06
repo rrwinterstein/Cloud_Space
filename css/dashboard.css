@@ -45,6 +45,7 @@ html, body {
   float: left;
   position: fixed;
   display: block;
+  overflow-x: hidden;
 }
 
 .site-logo {
