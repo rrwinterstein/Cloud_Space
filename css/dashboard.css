@@ -39,13 +39,74 @@ html, body {
 /*NAV*/
 .left-nav {
   height: 100vh;
+  width: 280px;
   min-width: 220px;
-  color: #FFFFFF;
-  background-color: #393A4A;
-  float: left;
-  position: fixed;
+  position: absolute;
   display: block;
   overflow-x: hidden;
+  color: #FFFFFF;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate(-280px,0);
+    -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+    -o-transform: translate(-280px,0); /** Opera **/
+    -moz-transform: translate(-280px,0); /** Firefox **/
+}
+
+.left-nav.open {
+  display: block;
+  width: 280px;
+  background-color: #393A4A;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+    z-index: 100;
+}
+
+.hamburger {
+  position: absolute;
+  z-index: 1000;
+  color: #CCCCCC;
+  text-decoration: none;
+  font-size: 22px;
+  left: 12px;
+  top: 15px;
+ }
+
+@media (min-width: 992px) {
+  .left-nav {
+    height: 100vh;
+    width: 16.6666%;
+    color: #FFFFFF;
+    background-color: #393A4A;
+    float: left;
+    position: fixed;
+    display: block;
+    z-index: 1;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+  }
+
+  .left-nav.open {
+    width: 16.6666%;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
 
 .site-logo {
@@ -117,9 +178,17 @@ html, body {
 
 /*CONTENT*/
 .content {
+  width: 100%;
   position: relative;
-  float: right;
-  background-color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+  .content {
+    width: 83.33%;
+    position: relative;
+    float: right;
+    background-color: #FFFFFF;
+  }
 }
 
 /*HEADER*/
@@ -146,6 +215,16 @@ html, body {
   color: #CCCCCC;
 }
 
+@media (max-width: 991px) {
+  .search {
+    margin-left: 50px;
+  }
+
+  .search-bar {
+    display: none;
+  }
+}
+
 .header-nav {
   display: inline-flex;
   position: absolute;
@@ -164,7 +243,13 @@ html, body {
 }
 
 .nav-btn img {
-  margin: 12.5px 0;
+  margin: 14px 0;
+}
+
+@media (max-width: 991px) {
+  .nav-btn {
+    padding: 0 12px;
+  }
 }
 
 /*SUBHEADER*/
@@ -202,13 +287,13 @@ html, body {
   padding: 10px 0;
 }
 
-.add-btn a {
+.add-btn button {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: bold;
   background-color: #EE3A85;
-  padding: 8px 24px;
+  padding: 10px 20px;
 }
 
 /*ITEMS*/
@@ -230,11 +315,6 @@ html, body {
 }
 
 @media (min-width: 460px) {
-  .content {
-    position: relative;
-    float: right;
-  }
-
   .content-item {
     display: block;
     float: left;
@@ -244,15 +324,6 @@ html, body {
 }
 
 @media (min-width: 768px) {
-  .content {
-    position: relative;
-    float: right;
-  }
-
-  .content > .container {
-    width: 700px;
-  }
-
   .content-item {
     width: 31.3333%;
     margin: 0 1% 25px;
@@ -260,15 +331,6 @@ html, body {
 }
 
 @media (min-width: 992px) {
-  .content {
-    position: relative;
-    float: right;
-  }
-
-  .content > .container {
-    width: auto;
-  }
-
   .content-item {
     width: 23%;
     margin: 0 1% 25px;

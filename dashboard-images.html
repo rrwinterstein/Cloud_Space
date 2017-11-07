@@ -14,89 +14,110 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="animate-css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.btndrop.css">
   </head>
 
-<body class="dashboard">
-  <!-- LEFT NAV -->
-  <nav id="left-nav" class="left-nav col-2">
-    <a href="#" class="site-logo"><img src="images/header-logo.svg"></a>
-    <div class="items">
-      <p>Items<img src="images/nav-icons/arrow.svg" alt=""></p>
-      <ul>
-        <li><a href="dashboard.html"><img src="images/nav-icons/all.svg" alt="">All Items</a></li>
-        <li><a href="#"><img src="images/nav-icons/notes.svg" alt="">Notes</a></li>
-        <li id="active"><a href="dashboard-images.html"><img src="images/nav-icons/images.svg" alt="">Images</a></li>
-        <li><a href="#"><img src="images/nav-icons/links.svg" alt="">Links</a></li>
-      </ul>
-    </div>
-    <hr noshade color=#60616E>
-    <div class="folders">
-      <p>Folders<img src="images/nav-icons/arrow.svg" alt=""></p>
-    </div>
-    <hr noshade color=#60616E>
-    <div class="shared">
-      <p>Shared<img src="images/nav-icons/arrow.svg" alt=""></p>
-    </div>
-  </nav>
-
-  <main role="main">
-    <!-- CONTENT -->
-    <section class="content col-10">
-
-      <!-- HEADER -->
-      <div class="header">
-        <img src="images/header-icons/search.svg" class="search" alt="">
-        <a href="#" class="search-bar">Search your space...</a>
-        <div class="header-nav">
-          <div class="nav-btn">
-            <a href="#"><img src="images/header-icons/home.svg" alt=""></a>
-          </div>
-          <div class="nav-btn">
-            <a href="#"><img src="images/header-icons/user.svg" alt=""></a>
-          </div>
-          <div class="nav-btn">
-            <a href="#"><img src="images/header-icons/settings.svg" alt=""></a>
-          </div>
-          <div class="nav-btn log-out">
-            <a href="#"><img src="images/header-icons/log-out.svg" alt=""></a>
-          </div>
-        </div>
+  <body class="dashboard">
+    <!-- RESPONSIVE NAV -->
+    <a href="#" class="hamburger" id="menu">&#9776;</a>
+    <!-- LEFT NAV -->
+    <nav class="left-nav col-2" id="left-nav">
+      <a href="#" class="site-logo"><img src="images/header-logo.svg"></a>
+      <div class="items">
+        <p>Items<img src="images/nav-icons/arrow.svg" alt=""></p>
+        <ul>
+          <li><img src="images/nav-icons/all.svg" alt=""><a href="dashboard.html">All Items</a></li>
+          <li><a href="#"><img src="images/nav-icons/notes.svg" alt="">Notes</a></li>
+          <li id="active"><a href="dashboard-images.html"><img src="images/nav-icons/images.svg" alt="">Images</a></li>
+          <li><a href="#"><img src="images/nav-icons/links.svg" alt="">Links</a></li>
+        </ul>
       </div>
-
-      <!-- SUBHEADER -->
-      <div class="subheader">
-        <div class="view">
-          <p id="selected">Grid</p>
-          <p>List</p>
-        </div>
-        <div class="add-btn">
-          <a href="#">+ Add</a>
-        </div>
+      <hr noshade color=#60616E>
+      <div class="folders">
+        <p>Folders<img src="images/nav-icons/arrow.svg" alt=""></p>
       </div>
-
-      <!-- ITEMS -->
-      <div class="container">
-        <div class="content-item">
-          <div class="item-box">
-            <img src="https://images.pexels.com/photos/63633/bar-local-cong-ireland-63633.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="item-box">
-            <img src="https://images.pexels.com/photos/7065/space-desk-office-hero-7065.jpg?h=350&auto=compress&cs=tinysrgb" alt="">
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="item-box">
-            <img src="https://images.pexels.com/photos/9410/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb" alt="">
-          </div>
-        </div>
-        <div class="content-item">
-          <div class="item-box">
-            <img src="https://images.pexels.com/photos/81363/office-work-desk-computer-81363.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-          </div>
-        </div>
+      <hr noshade color=#60616E>
+      <div class="shared">
+        <p>Shared<img src="images/nav-icons/arrow.svg" alt=""></p>
       </div>
-    </section>
-  </main>
-</body>
+    </nav>
+
+    <main role="main">
+      <!-- CONTENT -->
+      <section class="content col-10">
+
+        <!-- HEADER -->
+        <div class="header">
+          <img src="images/header-icons/search.svg" class="search" alt="">
+          <a href="#" class="search-bar">Search your space...</a>
+          <div class="header-nav">
+            <div class="nav-btn">
+              <a href="dashboard.html"><img src="images/header-icons/home.svg" alt=""></a>
+            </div>
+            <div class="nav-btn">
+              <a href="#"><img src="images/header-icons/user.svg" alt=""></a>
+            </div>
+            <div class="nav-btn">
+              <a href="#"><img src="images/header-icons/settings.svg" alt=""></a>
+            </div>
+            <div class="nav-btn log-out">
+              <a href="index.html"><img src="images/header-icons/log-out.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBHEADER -->
+        <div class="subheader">
+          <div class="view">
+            <p id="selected">Grid</p>
+            <p>List</p>
+          </div>
+          <div class="dropdown add-btn">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              + Add
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Note</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Image</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Link</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEMS -->
+        <div class="container">
+          <div class="content-item">
+            <div class="item-box">
+              <img src="https://images.pexels.com/photos/63633/bar-local-cong-ireland-63633.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="item-box">
+              <img src="https://images.pexels.com/photos/7065/space-desk-office-hero-7065.jpg?h=350&auto=compress&cs=tinysrgb" alt="">
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="item-box">
+              <img src="https://images.pexels.com/photos/9410/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb" alt="">
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="item-box">
+              <img src="https://images.pexels.com/photos/81363/office-work-desk-computer-81363.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $("#menu").click(function() {
+        $("#left-nav").toggleClass("open", 200);
+      });
+    </script>
+  </body>
+</html>
