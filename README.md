@@ -1,8 +1,8 @@
 # Cloud Space
-### Robert Winterstein
----
-##### Website
+#### Robert Winterstein
+
+###### Website
 https://rrwinterstein.github.io/Cloud_Space/
 
-##### Dashboard
+###### Dashboard
 https://rrwinterstein.github.io/Cloud_Space/dashboard
