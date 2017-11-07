@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title></title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="14" font-family="FontAwesome" opacity="0.300000012" font-weight="normal">
+        <g id="Dashboard" transform="translate(-284.000000, -114.000000)" fill="#333333">
+            <g id="Content" transform="translate(260.000000, 0.000000)">
+                <g id="Views" transform="translate(15.000000, 110.000000)">
+                    <g id="Grid" transform="translate(9.000000, 0.000000)">
+                        <text id="">
+                            <tspan x="0" y="15"></tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

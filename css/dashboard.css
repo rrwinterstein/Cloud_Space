@@ -274,7 +274,11 @@ html, body {
   color: #CCCCCC;
   margin: 0;
   border-bottom: 2px solid #CCCCCC;
-  padding: 0 20px 4px;
+  padding: 0 12px 4px;
+}
+
+.view img {
+  padding-right: 10px;
 }
 
 #selected {
