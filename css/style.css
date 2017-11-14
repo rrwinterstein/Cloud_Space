@@ -468,16 +468,18 @@ header nav div {
   margin: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-content {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .footer {
     padding-top: 50px;
     padding-bottom: 50px;
-  }
-
-  .footer-content {
-    display: block;
-    max-width: 900px;
-    margin: auto;
   }
 
   .footer-logo ul, .company ul, .follow-us ul, .support ul {
