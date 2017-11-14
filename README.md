@@ -2,7 +2,7 @@
 #### Robert Winterstein
 
 ###### Website
-https://rrwinterstein.github.io/Cloud_Space/
+https://rrwinterstein.github.io/cloud-space/
 
 ###### Dashboard
-https://rrwinterstein.github.io/Cloud_Space/dashboard
+https://rrwinterstein.github.io/cloud-space/dashboard
