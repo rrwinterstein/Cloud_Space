@@ -4,6 +4,8 @@
 
 This repo consists of a brief case study and assets for the design and development for Cloud Space. Below you can find links to the full prototype and the landing page and dashboard built with HTML, CSS and JavaScript. Keep in mind, not all links or actions may be clickable as it is a partial build to understand how the site and user dashboard function.
 
+**Full [case study](https://rwinterstein.com/cloud-space.html) available on my website.**
+
 [Prototype](https://projects.invisionapp.com/share/F5NU511SK96#/screens)
 
 [Landing page](https://rrwinterstein.github.io/cloud-space/)
